@@ -1,0 +1,53 @@
+<div class="mainpage">
+    <!-- Header -->
+    <div class="header">
+        <!-- Mobile Header (Visible on screens < 900px) -->
+        <div class="headerone">
+            <img class="smenuicon"
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAFFJREFUSEvtlEkKADAIA83/H52eu1APZQShnquTBaqAR/D9+IA04fqIbDuVdXkgaRK9OcABL+pPu/Ud4A7wDnAAHlF/AN4BDujfwXewJoD/pgNrVBgZX2h0sgAAAABJRU5ErkJggg=="
+                (click)="showmenu()" />
+            <p class="name">Jeeva Rathinam</p>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="modal" data-backdrop="static" id="smenu-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="closesmenu" data-dismiss="modal" aria-label="Close" (click)="close()">
+                    <svg class="closesmenuicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="#f7f7f7" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l128 128c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 288 480 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-370.7 0 73.4-73.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-128 128z" />
+                    </svg>
+                </button>
+            </div>
+            <ul id="navul">
+                <li class="op">Home</li>
+                <li class="op">Skills</li>
+                <li class="op">Education</li>
+                <li class="op">Certification</li>
+            </ul>
+        </div>
+
+        <!-- Desktop Header (Visible on screens >= 900px) -->
+        <div class="headertwo">
+            <p class="nametwo">Jeeva Rathinam</p>
+            <ul id="navultwo">
+                <li class="op">Home</li>
+                <li class="op">Skills</li>
+                <li class="op">Education</li>
+                <li class="op">Certification</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content Hero Section -->
+    <div class="maincontent">
+        <div id="hi">
+            Hi,<br>I'm <span id="nh">Jeeva</span><br>
+            <span class="role">Frontend Developer</span>
+        </div>
+        <div id="photo">
+            <div class="profile-img-container">
+                <img id="mypic" src="Resume-removebg-preview.png" alt="Jeeva Rathinam">
+            </div>
+        </div>
+    </div>
+</div>

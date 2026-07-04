@@ -1,0 +1,260 @@
+<div class="app-container">
+
+
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <!-- Profile Picture -->
+      <div class="profile-picture">
+        <img src="assets/images/Jeeva-new.jpeg" alt="Jeeva Rathinam" class="hero-photo" />
+      </div>
+
+      <h1>Hi, I'm Jeeva</h1>
+      <h3>Frontend Developer | Angular</h3>
+
+      <!-- Modern Styled About Me & CV Section -->
+      <div class="about-hero-box">
+        <p class="about-text">
+          I am an Angular Developer with 2 years of experience in building responsive web applications,
+          integrating REST APIs, and developing reusable UI components using Angular, TypeScript, and RxJS.
+        </p>
+        <a href="assets/resume/Jeeva_Rathinam_CV.pdf" download="Jeeva_Rathinam_CV.pdf" class="cv-download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="download-icon">
+            <path
+              d="M12 15.575L7.7 11.275L9.125 9.85L11 11.725V4H13V11.725L14.875 9.85L16.3 11.275L12 15.575ZM6 20C5.45 20 4.97917 19.8042 4.5875 19.4125C4.19583 19.0208 4 18.55 4 18V16H6V18H18V16H20V18C20 18.55 19.8042 19.0208 19.4125 19.4125C19.0208 19.8042 18.55 20 18 20H6Z" />
+          </svg>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul #menuContainer [ngClass]="{ 'show': menuVisible }">
+      <li><a (click)="close()" href="#hero">Home</a></li>
+      <li><a (click)="close()" href="#experience">Experience</a></li>
+      <li><a (click)="close()" href="#projects">Projects</a></li>
+      <li><a (click)="close()" href="#skills">Skills</a></li>
+      <li><a (click)="close()" href="#education">Education</a></li>
+      <li><a (click)="close()" href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-card">
+      <div class="exp-header">
+        <div>
+          <h3>Savyasasy Software Solutions</h3>
+          <p class="role-title">Junior Software Engineer - Frontend Developer</p>
+        </div>
+        <span class="duration-badge">2 Years</span>
+      </div>
+
+      <ul class="exp-bullet-list">
+        <li>Developed and maintained a robust ERP solution for school management.</li>
+        <li>Built responsive, user-centric web interfaces using Angular and modern frontend technologies.</li>
+        <li>Translated UI/UX designs into clean, functional code using Bootstrap and custom CSS.</li>
+        <li>Collaborated with backend teams to integrate RESTful APIs and optimize application performance.</li>
+        <li>Identified and resolved UI/UX issues based on QA testing and real-time client feedback.</li>
+        <li>Contributed to UI enhancements that improved user engagement and reduced bounce rates.</li>
+        <li>Mentored junior developers, promoting adherence to coding standards and best practices.</li>
+        <li>Enhanced system functionality and addressed client-reported issues promptly and efficiently.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- Project Container 1: Schoolchimes -->
+    <div class="main-project-container">
+      <div class="project-main-header">
+        <span class="project-tag">Product</span>
+        <h3>Schoolchimes ERP</h3>
+      </div>
+
+      <div class="sub-project-card">
+        <h4>Module Development & Production Support</h4>
+        <ul class="custom-work-bullets">
+          <li>Developed features for the Inventory and Library modules.</li>
+          <li>Designed and implemented the Fee Report user interface.</li>
+          <li>Provided live production support by identifying and resolving real-time issues.</li>
+          <li>Collaborated with the team to enhance existing features and improve application stability.</li>
+        </ul>
+      </div>
+
+      <div class="sub-project-card">
+        <h4>User Privilege Management</h4>
+        <p class="project-desc">Redesigned the user privilege system to simplify permission management across multiple
+          schools, making it easier for Group Administrators to manage users from a single interface.</p>
+        <ul class="custom-work-bullets">
+          <li>Redesigned the user privilege system to support permission management across multiple schools instead of a
+            single school. Administrators can now manage menu access for both the main school and branch schools from a
+            single interface. I also implemented a School Switch feature that allows Group Administrators to switch
+            between schools without logging out, making multi-school management more efficient and user-friendly.</li>
+        </ul>
+      </div>
+
+      <div class="sub-project-card">
+        <h4>WhatsApp Integration</h4>
+        <p class="project-desc">Developed a WhatsApp integration module using an ICS provider to streamline template creation and message delivery.</p>
+        <ul class="custom-work-bullets">
+          <li>Designed a WhatsApp template creation interface with a real-time preview panel.</li>
+          <li>Integrated with an ICS provider for template management and message delivery.</li>
+          <li>Implemented template approval status tracking.</li>
+          <li>Enabled sending messages using approved WhatsApp templates.</li>
+          <li>Developed a clean and user-friendly interface for template management.</li>
+        </ul>
+      </div>
+
+      <div class="sub-project-wrapper">
+        <div class="sub-project-card feature-highlight">
+          <h4>Parent-Teachers Meeting Scheduling Module</h4>
+          <p class="project-desc">Implemented a centralized multi-portal scheduling system enabling automated time slot
+            handling across the operational hierarchy.</p>
+
+          <!-- 3 Distinct Portal Work Layers Inside Container 1 -->
+          <div class="portal-grid">
+            <div class="portal-column">
+              <h5>Staff Portal</h5>
+              <ul>
+                <li>Teachers can create available meeting time slots by selecting specific dates, times, and dynamic
+                  slot durations.</li>
+                <li>Provides absolute flexibility and full manual control over individual academic schedules.</li>
+              </ul>
+            </div>
+
+            <div class="portal-column">
+              <h5>Parent Portal</h5>
+              <ul>
+                <li>Parents easily look up real-time live availability matrices and pick slots instantly at convenience.
+                </li>
+                <li>System-level locks entirely eliminate double-bookings and route real-time notification handshakes.
+                </li>
+              </ul>
+            </div>
+
+            <div class="portal-column">
+              <h5>Admin Portal</h5>
+              <ul>
+                <li>Centralized global dashboard monitoring capabilities for institutional operations teams.</li>
+                <li>Smooth system processing overrides for cancellations, modifications, and master historical data
+                  logs.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sub-project-card">
+        <h4>Data Security Implementation</h4>
+        <p class="project-desc">Implemented a secure data communication mechanism between the backend and frontend to
+          protect sensitive information during transmission.</p>
+        <ul class="custom-work-bullets">
+          <li>Encrypted sensitive data on the server before sending it to the client.</li>
+          <li>Implemented client-side decryption using a secure key.</li>
+          <li>Ensured secure data transfer between the backend and frontend.</li>
+          <li>Gained hands-on experience with encryption, decryption, and secure data handling techniques.</li>
+        </ul>
+      </div>
+
+
+    </div>
+
+    <!-- Project Container 2: Security & RGUHS -->
+    <div class="main-project-container">
+      <div class="project-main-header">
+        <span class="project-tag">Product</span>
+        <h3>RGU Meet</h3>
+      </div>
+
+      <div class="sub-project-wrapper simple-stack">
+        <!-- Security Work Integration -->
+
+
+        <!-- RGUHS Platform Work Integration -->
+        <div class="sub-project-card">
+          <h4>University Multi-College Staff Meeting Management System</h4>
+          <p class="project-desc">For Rajiv Gandhi University of Health Sciences, Karnataka</p>
+          <p class="project-desc">Developed the frontend of a centralized web application to manage staff meetings across multiple colleges under a single university. The system streamlines meeting scheduling, attendance management, and allowance claim processing through dedicated portals for administrators and staff.</p>
+
+          <ul class="custom-work-bullets">
+            <li>Developed separate login portals for Admin and Staff users.</li>
+            <li>Built the Admin Portal to manage staff accounts, schedule meetings, and process allowance claims.</li>
+            <li>Developed the Staff Portal for viewing meeting schedules, marking attendance, and submitting allowance claim requests.</li>
+            <li>Implemented a user-friendly interface for efficient meeting and claim management across multiple colleges.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li style="width: 200px;"><img src="assets/images/html.png" width="40px" alt="html" /><br>HTML</li>
+      <li style="width: 200px;"><img src="assets/images/css.png" width="40px" alt="html" /><br>CSS</li>
+      <li style="width: 200px;"><img src="assets/images/bootstrap.png" width="40px" alt="html" /><br>Bootstrap</li>
+      <li style="width: 200px;"><img src="assets/images/typescript.png" width="40px" alt="html" /><br>TypeScript</li>
+      <li style="width: 200px;"><img src="assets/images/angular.png" width="40px" alt="html" /><br>Angular</li>
+      <li style="width: 200px;"><img src="assets/images/problem.png" width="40px" alt="html" /><br>Problem Solving</li>
+      <li style="width: 200px;"><img src="assets/images/logical.png" width="40px" alt="html" /><br>Logical Thinking</li>
+      <li style="width: 200px;"><img src="assets/images/team.png" width="40px" alt="html" /><br>Team Collaboration</li>
+      <li style="width: 200px;"><img src="assets/images/monitoring.png" width="40px" alt="html" /><br>Mentoring</li>
+    </ul>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="timeline-section">
+    <h2>Education</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <p>MSc in Physics from Kongunadu Arts and Science College (Autonomous), Coimbatore.</p>
+        <p><b>With 68 %</b></p>
+        <p><b>Year of passing : 2023</b></p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <p>BSc in Physics from St.Joseph's College (Autonomous), Trichy.</p>
+        <p><b>With 72 %</b></p>
+        <p><b>Year of passing : 2021</b></p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <p>HSC from M.S.P. Solai Nadar Memorial Higher Secondary School, Dindigul.</p>
+        <p><b>With 75 %</b></p>
+      </div>
+      <div class="timeline-item">
+        <div class="dot"></div>
+        <p>SSLC from M.S.P. Solai Nadar Memorial Higher Secondary School, Dindigul.</p>
+        <p><b>With 90 %</b></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><img src="assets/images/phone.png" width="20px" alt="html" /><a style="margin-left: 10px;">+91 9585116273</a></p>
+    <p><img src="assets/images/email.png" width="20px" alt="html" /><a href="mailto:jeevaofficial3003@gmail.com"
+        style="text-decoration: none; color: inherit; margin-left: 10px;">jeevaofficial3003&commat;gmail.com</a></p>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2026 Jeeva Rathinam. All Rights Reserved.</p>
+  </footer>
+</div>

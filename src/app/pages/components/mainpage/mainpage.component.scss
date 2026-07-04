@@ -1,0 +1,240 @@
+// Global resets & variables
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+$primary-color: #FF662D;
+$dark-bg: #303030;
+$text-light: #ffffff;
+
+.mainpage {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1e1e1e; // Sleek modern dark canvas
+    min-height: 100vh;
+    color: $text-light;
+
+    .header {
+        position: relative;
+        
+        // Mobile Header Reset Default
+        .headerone {
+            display: none;
+        }
+
+        // Mobile Modern Drawer Menu Design
+        #smenu-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px; 
+            height: 100vh;
+            background: rgba($dark-bg, 0.98);
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.5);
+            z-index: 1050;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            border-right: 3px solid $primary-color;
+            transition: all 0.3s ease-in-out;
+
+            .modal-header {
+                display: flex;
+                justify-content: flex-end;
+                margin-bottom: 30px;
+
+                .closesmenu {
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                    
+                    .closesmenuicon {
+                        width: 28px;
+                        height: 28px;
+                        transition: transform 0.2s;
+                        &:hover { transform: scale(1.1); }
+                    }
+                }
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+                    font-size: 18px;
+                    color: $text-light;
+                    font-weight: 500;
+                    padding: 10px 15px;
+                    border-radius: 8px;
+                    cursor: pointer;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .headertwo {
+            display: none;
+        }
+    }
+
+    // Hero Section Grid Setup
+    .maincontent {
+        display: flex;
+        flex-direction: column-reverse; // Stack photo on top natively on small mobile screen layouts
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        #hi {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            font-weight: 800;
+            text-align: center;
+
+            #nh {
+                color: $primary-color;
+            }
+            .role {
+                font-size: 1.8rem;
+                color: #b3b3b3;
+                font-weight: 400;
+            }
+        }
+
+        // Sleek Circular Profile Picture Frame
+        #photo {
+            .profile-img-container {
+                position: relative;
+                width: 220px;
+                height: 220px;
+                border-radius: 50%;
+                background: linear-gradient(145deg, #252525, #3a3a3a);
+                border: 4px solid $primary-color;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                img {
+                    width: 90%;
+                    height: 90%;
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+/* Responsive Breakpoints */
+
+// Mobile & Tablet Rules
+@media screen and (max-width: 899px) {
+    .mainpage {
+        .header {
+            .headerone {
+                width: 100%;
+                height: 65px;
+                display: flex !important;
+                align-items: center;
+                background-color: $dark-bg;
+                justify-content: space-between;
+                padding: 0 20px;
+
+                .smenuicon {
+                    width: 28px;
+                    height: 28px;
+                    cursor: pointer;
+                }
+
+                .name {
+                    color: $primary-color;
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+// Desktop Screen Rules
+@media screen and (min-width: 900px) {
+    .mainpage {
+        .header {
+            #smenu-modal {
+                display: none !important;
+            }
+            
+            .headertwo {
+                width: 100%;
+                height: 70px;
+                display: flex !important;
+                align-items: center;
+                background-color: $dark-bg;
+                justify-content: space-between;
+                padding: 0 50px;
+
+                .nametwo {
+                    color: $primary-color;
+                    font-size: 22px;
+                    font-weight: 700;
+                }
+
+                #navultwo {
+                    list-style: none;
+                    display: flex;
+                    gap: 30px;
+
+                    li {
+                        font-size: 16px;
+                        color: $text-light;
+                        font-weight: 500;
+                        cursor: pointer;
+                        transition: color 0.2s;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Splitting into Side-by-Side row on Desktop viewports
+        .maincontent {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 100px 50px;
+            
+            #hi {
+                text-align: left;
+                font-size: 3.5rem;
+                
+                .role {
+                    font-size: 2.2rem;
+                }
+            }
+
+            #photo {
+                .profile-img-container {
+                    width: 320px;
+                    height: 320px;
+                }
+            }
+        }
+    }
+}
