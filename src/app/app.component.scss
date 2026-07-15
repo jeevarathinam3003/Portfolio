@@ -46,11 +46,12 @@ body {
 }
 
 .hero-photo {
-  width: 300px;
+  width: 240px;
   height: 300px;
   border-radius: 150px 150px 0px 150px;
   object-fit: cover;
   box-shadow: 10px 5px #d1d1d1;
+  background: white;
 }
 
 /* About Box Container & Download CV Layouts */
@@ -478,5 +479,3 @@ footer {
     display: flex;
   }
 }
-
-
