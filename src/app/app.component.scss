@@ -817,6 +817,16 @@ footer {
     text-align: center;
   }
 
+  .hero-image-container {
+    order: 1;
+    margin-bottom: 20px; /* Text oda merge aagama irukka chinna gap */
+  }
+
+  /* Text content-ah photo-ku kela thakka */
+  .hero-text-content {
+    order: 2;
+  }
+
   .timeline-wrapper {
     grid-template-columns: 1fr;
   }
