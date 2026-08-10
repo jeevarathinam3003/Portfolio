@@ -301,6 +301,7 @@ body {
     position: relative;
     width: 320px;
     height: 380px;
+
     margin: 0 auto;
 
     .green-backdrop {
@@ -820,7 +821,8 @@ footer {
   .hero-image-container {
     order: 1;
     margin-bottom: 20px;
-    /* Text oda merge aagama irukka chinna gap */
+    width: 250px !important;
+    height: 320px !important;
   }
 
   /* Text content-ah photo-ku kela thakka */
@@ -886,6 +888,8 @@ footer {
       height: 1px;
     }
   }
+
+
 }
 
 .three {
