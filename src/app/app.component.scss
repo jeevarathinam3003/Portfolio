@@ -819,7 +819,8 @@ footer {
 
   .hero-image-container {
     order: 1;
-    margin-bottom: 20px; /* Text oda merge aagama irukka chinna gap */
+    margin-bottom: 20px;
+    /* Text oda merge aagama irukka chinna gap */
   }
 
   /* Text content-ah photo-ku kela thakka */
@@ -854,6 +855,7 @@ footer {
         width: 65%;
         border-radius: 31px 0px 0px 5px;
         background-color: #00cc6a;
+        box-shadow: -1px 4px 0px 2px white;
       }
 
       li a {
@@ -891,12 +893,12 @@ footer {
   height: 90px;
 }
 
-.new-card{
+.new-card {
   width: 100% !important;
   display: unset;
-    gap: unset;
+  gap: unset;
 }
 
-.academic{
+.academic {
   padding-top: 0px !important;
 }
