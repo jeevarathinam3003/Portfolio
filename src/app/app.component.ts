@@ -12,21 +12,10 @@ export class AppComponent {
 
   menuVisible = false;
 
-  // Toggle the visibility of the menu
   toggleMenu() {
     this.menuVisible = !this.menuVisible;
   }
 
-  // Detect click or touch outside the menu
-  // @HostListener('document:click', ['$event'])
-  // @HostListener('document:touchstart', ['$event'])
-  // handleOutsideClick(event: Event) {
-  //   if (this.menuVisible && this.menuRef && !this.menuRef.nativeElement.contains(event.target)) {
-  //     this.close();
-  //   }
-  // }
-
-  // Detect scroll
   @HostListener('window:scroll', [])
   onScroll() {
     if (this.menuVisible) {
@@ -36,5 +25,13 @@ export class AppComponent {
 
   close() {
     this.menuVisible = false;
+  }
+
+  // Smooth scroll method for floating contact button
+  scrollToContact() {
+    const contactElement = document.getElementById('contact');
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }
